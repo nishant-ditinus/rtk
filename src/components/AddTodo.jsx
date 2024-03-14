@@ -9,7 +9,6 @@ function AddTodo() {
 
     const addTodoHandler = (e) => {
         e.preventDefault()
-
         dispath(addTodo(input))
         setInput("")
     }

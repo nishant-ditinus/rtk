@@ -4,14 +4,14 @@ const initialState = {
   todos: [{id: 1, text: "Hey RTK!"}],
 };
 
-export const todoSLice = createSlice({
+export const todoSlice = createSlice({
   name: "todo",
   initialState,
   reducers: {
     addTodo: (state, action) => {
       const todo = {
         id: nanoid(),
-        text: action.payload.text,
+        text: action.payload,
       };
       state.todos.push(todo);
     },
@@ -21,6 +21,6 @@ export const todoSLice = createSlice({
   },
 });
 
-export const {addTodo, removeTodo} = todoSLice.actions
+export const { addTodo, removeTodo } = todoSlice.actions;
 
-export default todoSLice.reducer
+export default todoSlice.reducer;
